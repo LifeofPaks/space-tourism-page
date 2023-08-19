@@ -1,0 +1,210 @@
+@import "../../styles/Responsive.scss";
+
+.destination{
+    background-image: url('../../../src/assets/destination/background-destination-desktop.jpg');
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-position: 0 100%;
+    overflow: hidden;
+
+    @include Tablet {
+        background-image: url("../../../src/assets/destination/background-destination-tablet.jpg");
+        background-size: cover;
+      }
+
+    .hero{
+        padding-top: 12rem;
+        display: flex;
+        align-items: flex-end;
+        gap: 10%;
+        padding-inline: 10rem;
+
+        @include Tablet {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 0;
+          }
+
+          @include Mobile {
+            padding-inline: 1rem;
+        }
+
+        .left{
+            opacity: 0;
+            animation: backInLeft 2s 1s forwards;
+
+            @include Tablet {
+                margin-top: 6rem;
+                margin-bottom: 4rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+              }
+
+            @include Mobile {
+                margin-bottom: 3rem;
+            }
+            
+            h1{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 4rem;
+                text-transform: uppercase;
+                color: #fff;
+                font-size: 20px;
+                font-weight: 300;
+                letter-spacing: 2px;
+
+                @include Tablet {
+                    font-size: 16px;
+                  }
+
+                @include Mobile {
+                margin-bottom: 3rem;
+                 }
+
+                span{
+                    font-weight: 700;
+                    color: gray;
+                }
+            }
+
+            img{
+                margin-left:5rem;
+                animation: jackInTheBox 2s 4s forwards;
+                opacity: 0;
+
+                @include Tablet {
+                    margin-left: 0;
+                    width: 280px;
+                }
+              
+            }
+           
+        }
+
+        .right{
+
+            opacity: 0;
+            animation: backInUp 2s 2s forwards;
+
+
+            @include Tablet {
+                margin-bottom: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+              }
+
+            .links{
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                margin-bottom: 4rem;
+
+                @include Tablet {
+                    margin-bottom: 1rem;
+                  }
+
+                .link{
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    letter-spacing: 2px;
+                    font-weight: 200;
+                    padding-bottom: 1rem;
+                    border-bottom: 2px solid transparent;
+                    transition: .5s;
+
+                    @include Tablet {
+                        font-size: 11px;
+                      }
+
+                    &.active{
+                        border-bottom: 2px solid #fff;
+                    }
+                }
+            }
+
+            .content{
+                color: #fff;
+
+                h1{
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size: 8rem;
+                letter-spacing: 5px;
+                margin-bottom: 1.5rem;
+
+                @include Tablet {
+                    font-size: 5rem;
+                    margin-bottom: 1rem;
+                  }
+                }
+
+                p{
+                    line-height: 25px;
+                    font-size: 15px;
+                    width: 400px;
+                    font-weight: 200;
+
+                    @include Tablet {
+                        width: 100%;
+                        padding-inline: 5%;
+                        font-size: 14px;
+                      }
+
+
+                      @include Mobile {
+                        padding-inline: 0;
+                      }
+
+                }
+            }
+
+            .details{
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                padding-top: 2rem;
+                margin-top: 2rem;
+                color: #fff;
+                border-top: .5px solid #ccc;
+
+                @include Tablet {
+                    padding-top: 1rem;
+                  }
+
+                .col{
+                    p{
+                        margin-bottom: 1rem;
+                        font-weight: 100;
+                        text-transform: uppercase;
+                        font-size: 13px;
+                        letter-spacing: 2px;
+
+                        @include Tablet {
+                            font-size: 12px;
+                          }
+                    }
+
+                    h3{
+                        text-transform: uppercase;
+                        font-weight: 300;
+
+                        @include Tablet {
+                            font-size: 14px;
+                          }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

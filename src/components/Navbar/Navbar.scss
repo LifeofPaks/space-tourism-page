@@ -1,0 +1,164 @@
+@import "../../styles/Responsive.scss";
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    left: 3rem;
+    top: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+
+   
+    @include Tablet {
+        position: absolute;
+        top: 0;
+        gap: 10rem;
+        left: 0;
+      }
+
+    @include Mobile {
+        left: 0;
+        gap: 0;
+        padding: 2rem 1rem;
+        overflow: hidden;
+    }
+
+
+    .logo{
+        img{
+
+            @include Tablet {
+                padding-left: 3rem;
+                width: 75px;
+                }
+    
+            @include Mobile {
+                padding-left: 0;
+                width: 25px;
+            }
+        }
+    }
+  
+
+    .hamburger{
+        display: none;
+        
+        @include Mobile {
+            cursor: pointer;
+            display: block;
+          }
+    }
+
+
+    .navLinksWrapper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        hr{
+            width: 60%;
+            height: 1px;
+            background: #555;
+            border: none;
+            margin-right: -2rem;
+            z-index: 1;
+
+            @include Tablet {
+                display: none;
+              }
+        }
+
+        .navLinks{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding-left: 8%;
+            width: 100%;
+            backdrop-filter: blur(5px);
+            background: #ffffff08;
+            border-bottom: px solid transparent;
+            transition: .3s;
+
+            @include Tablet {
+                padding-left: 4rem;
+              }
+
+
+              @include Mobile {
+                padding-left: 4rem;
+                position: fixed;
+                height: 100%;
+                width: 100%;
+                left: 100%;
+                padding-top: 6rem;
+                bottom: 0;
+                z-index: 10;
+                flex-direction: column;
+                align-items: center;
+                backdrop-filter: blur(10px);
+                padding-left: 0;
+              }
+              
+              &.show{
+
+                @include Mobile {
+                    left: 0;
+                  }
+              }
+
+
+            .closemMenu{
+                display: none;
+
+                @include Mobile{
+                    display: block;
+                    position: fixed;
+                    top: 2rem;
+                    right: 2rem;
+                    width: 14px;
+                }
+            }
+
+            .links{
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding-block: 1.5rem;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 13px;
+                letter-spacing: 2px;
+                font-weight: 200;
+                border-bottom: 2px solid transparent;
+                transition: .5s;
+
+                @include Tablet {
+                    padding-block: 1rem;
+                    font-size: 11px;
+                  }
+                
+                  @include Mobile {
+                    font-size: 16px;
+                  }
+
+
+                span{
+                    font-weight: 600;
+
+                    @include Tablet {
+                        display: none;
+                      }
+                }
+
+                &:active{
+                    border-bottom: 2px solid #fff;
+                }
+
+                &.active{
+                    border-bottom: 2px solid #fff;
+                }
+            }
+        }
+    }
+}
