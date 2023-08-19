@@ -14,7 +14,7 @@ const Destination = ({tabChange, planetNumber, navigation}) => {
             <p>Pick your destination</p>
           </h1>
 
-          <img src={item.image} alt="mars" />
+          <img src={item.image} alt="planet" />
         </div>
 
         <div className="right">

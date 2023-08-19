@@ -43,7 +43,10 @@ const Navbar = () => {
             <span>03</span><p>technology</p>
           </NavLink>
 
-          <img src={CloseIcon} alt="close" className="closemMenu" onClick={closeMenu}/>
+          {
+            showMenu &&
+            <img src={CloseIcon} alt="close" className="closemMenu" onClick={closeMenu}/>
+          }
         </div>
       </div>
 
